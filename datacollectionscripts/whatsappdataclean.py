@@ -34,12 +34,12 @@ for filename in os.listdir(directory):
                     elif current_person == person_name:
                         current_message += " " + message[2:]  # remove the first two characters from subsequent messages
                     else:
-                        line = match.group(1) + current_person + remove_emoji(current_message).replace('QWERTYGHOANV', 'loldude').lower()
+                        line = match.group(1) + current_person + remove_emoji(current_message).replace('Aryan Tajne', 'loldude').lower()
                         new_lines.append(line)
                         current_person = person_name
                         current_message = message
         if current_person is not None:
-            line = match.group(1) + current_person + remove_emoji(current_message).replace('QWERTYGHOANV', 'loldude').lower()
+            line = match.group(1) + current_person + remove_emoji(current_message).replace('Aryan Tajne', 'loldude').lower()
             new_lines.append(line)
 
         with open(filepath, 'w', encoding='utf-8') as file:

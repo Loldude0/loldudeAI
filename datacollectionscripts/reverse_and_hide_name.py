@@ -23,9 +23,8 @@ def change_author_remove_parts_and_reverse_lines_in_file(file_path):
 
 def change_author_remove_parts_and_reverse_lines_in_files_in_directory(directory_path):
     for filename in os.listdir(directory_path):
-        if filename.endswith('.txt'):  # assuming you want to reverse lines in .txt files
+        if filename.endswith('.txt'): 
             file_path = os.path.join(directory_path, filename)
             change_author_remove_parts_and_reverse_lines_in_file(file_path)
 
-# replace 'your_directory_path' with your actual directory path
 change_author_remove_parts_and_reverse_lines_in_files_in_directory(r'D:\Projects\loldudeAI\rawconversations\discord')
