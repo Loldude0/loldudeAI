@@ -2,10 +2,13 @@ import os
 import datetime
 
 def convert_to_iso8601(time_str):
-    # Convert the time string to a datetime object
-    dt = datetime.datetime.strptime(time_str, "%m/%d/%y, %I:%M %p")
-    # Convert the datetime object to an ISO 8601 string with a zero offset
-    return dt.strftime("%Y-%m-%dT%H:%M:%S.000000+00:00")
+    try:
+        # Convert the time string to a datetime object
+        dt = datetime.datetime.strptime(time_str, "%m/%d/%y, %I:%M %p")
+        return dt.strftime("%Y-%m-%dT%H:%M:%S.000000+00:00")
+    except ValueError:
+        print(f"Invalid time format: {time_str}")
+        return time_str
 
 def process_file(file_path):
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -27,4 +30,4 @@ def process_directory(dir_path):
             process_file(os.path.join(root, file))
 
 # Start the processing
-process_directory("D:\\Projects\\loldudeAI\\rawconversations\\whatsapp")
+process_directory(r"D:\Projects\loldudeAI\raw\whatsapp")
