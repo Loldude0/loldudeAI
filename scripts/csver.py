@@ -21,7 +21,7 @@ def write_to_csv(data, output_file):
         writer.writerow(['response', 'context', 'context/0', 'context/1', 'context/2', 'context/3', 'context/4', 'context/5', 'context/6'])
         writer.writerows(data)
 
-directory = "D:\\Projects\\loldudeAI\\rawconversations"
-output_file = "D:\\Projects\\loldudeAI\\dataset\\dataset.csv"
+directory = r"D:\Projects\loldudeAI\raw"
+output_file = "D:\\Projects\\loldudeAI\\dataset\\dataset_three.csv"
 data = process_files(directory)
 write_to_csv(data, output_file)

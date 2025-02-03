@@ -30,4 +30,4 @@ def process_directory(dir_path):
             process_file(os.path.join(root, file))
 
 # Start the processing
-process_directory(r"D:\Projects\loldudeAI\raw\whatsapp")
+process_directory(r"D:\Projects\loldudeAI\temp")

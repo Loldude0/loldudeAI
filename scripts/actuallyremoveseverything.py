@@ -20,7 +20,7 @@ def remove_strings_in_files(directory, strings_to_remove):
                             line = line.replace(string, '')
                     file.write(line)
 
-directory = r'D:\Projects\loldudeAI\raw\whatsapp'
-strings_to_remove = ['You deleted this message', '<Media omitted>']
+directory = r'D:\Projects\loldudeAI\temp'
+strings_to_remove = ['You deleted this message', 'Media omitted']
 
 remove_strings_in_files(directory, strings_to_remove)

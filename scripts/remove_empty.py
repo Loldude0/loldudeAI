@@ -21,4 +21,4 @@ def process_files(directory):
                                     f.write(timestamp + ' - ' + author + ': ' + message)
                     f.truncate()
 
-process_files(r'D:\Projects\loldudeAI\rawconversations')
+process_files(r'D:\Projects\loldudeAI\temp')
